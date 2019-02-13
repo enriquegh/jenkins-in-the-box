@@ -1,0 +1,5 @@
+ARG JENKINS_VERSION=latest
+FROM jenkins/jenkins:${JENKINS_VERSION}
+
+ARG JENKINS_VERSION
+RUN echo Using Jenkins version ${JENKINS_VERSION}
