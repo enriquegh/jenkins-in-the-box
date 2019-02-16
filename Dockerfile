@@ -12,7 +12,12 @@ USER jenkins
 
 #Skip Setup Wizard
 
+# runSetupWizard avoids Jenkins setup
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+
+# Avoid OpenJDK Surefire bug. See https://issues.apache.org/jira/browse/SUREFIRE-1588
+# Can be removed once Jenkins/Debian image adds OpenJDK version 1.8.0_191
+ENV _JAVA_OPTIONS="-Djdk.net.URLClassPath.disableClassPathURLCheck=true"
 
 # Copy plugin list and install before launch
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
