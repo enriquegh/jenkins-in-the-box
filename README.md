@@ -28,7 +28,7 @@ Sauce Labs access key used to create a credentials object. Default is set to bar
 
 ### Build command:
 ```bash
-docker build --build-arg JENKINS_VERSION=latest --build-arg ONDEMAND_PLUGIN_VERSION=latest --build-arg DOCKER_SAUCE_USERNAME=$SAUCE_USERNAME --build-arg DOCKER_SAUCE_ACCESS_KEY==$SAUCE_ACCESS_KEY -t support_jenkins .
+docker build --build-arg JENKINS_VERSION=latest --build-arg ONDEMAND_PLUGIN_VERSION=latest --build-arg DOCKER_SAUCE_USERNAME=$SAUCE_USERNAME --build-arg DOCKER_SAUCE_ACCESS_KEY=$SAUCE_ACCESS_KEY -t support_jenkins .
 ```
 
 NOTE: the support_jenkins is the name of the tag of the image. This can be set to anything you want as long as it's used the same exact way when starting the container.
