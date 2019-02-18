@@ -3,6 +3,8 @@ import hudson.plugins.git.BranchSpec;
 import hudson.model.FreeStyleProject;
 import hudson.tasks.Shell;
 
+import jenkins.model.Jenkins;
+
 import org.jenkinsci.plugins.workflow.job.WorkflowJob;
 import org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition;
 
