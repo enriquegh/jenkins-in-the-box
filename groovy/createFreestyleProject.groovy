@@ -14,8 +14,8 @@ jenkins = Jenkins.instance;
 FreeStyleProject freeProject = new FreeStyleProject(jenkins,"sample-java-freestyle");
 
 // Create Git SCM option and set to master branch
-scm2 = new GitSCM("https://github.com/saucelabs-sample-test-frameworks/Java-JUnit-Selenium");
-scm2.branches = [new BranchSpec("*/master")];
+scm2 = new GitSCM("https://github.com/enriquegh/Java-JUnit-Selenium");
+scm2.branches = [new BranchSpec("*/eg-dynamic-ondemand")];
 
 // Create Maven Builder
 Maven maven = new Maven("clean test",null);
